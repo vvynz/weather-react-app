@@ -1,4 +1,5 @@
 import React from "react";
+import SearchEngine from "./SearchEngine";
 import "./App.css";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Weather App</h1>
-       
+        <SearchEngine />
       </header>
     </div>
   );
