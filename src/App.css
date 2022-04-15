@@ -3,3 +3,10 @@
   text-align: left;
   padding-left: 10px;
 }
+
+.App-body {
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
+  max-width: 650px;
+  border-radius: 7px;
+  padding: 10px;
+}
