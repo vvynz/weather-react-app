@@ -36,12 +36,19 @@ export default function SearchEngine() {
     return (
       <div>
         <form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col-9">
           <input
             type="search"
             placeholder="Enter a city"
             onChange={updateCity}
+            className="form-control"
           />
-          <input type="submit" />
+          </div>
+          <div className="col-3">
+          <input type="submit" className="btn btn-primary"/>
+          </div>
+        </div>
         </form>
         <h1>{city}</h1>
         <p>{description}</p>
