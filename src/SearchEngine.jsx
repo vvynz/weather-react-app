@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function SearchEngine () {
+export default function SearchEngine() {
   let [city, setCity] = useState("");
   let [temperature, setTemperature] = useState(null);
   let [humidity, setHumidity] = useState("");
@@ -43,15 +43,21 @@ export default function SearchEngine () {
           />
           <input type="submit" />
         </form>
-        <ul>
-          <li>Temperature: {Math.round(temperature)}</li>
-          <li>Description: {description}</li>
-          <li>Humidity: {humidity}%</li>
-          <li>wind: {wind}km/h</li>
-          <li>
+        <h1>{city}</h1>
+        <p>{description}</p>
+        <div className="row">
+          <div className="col-6">
             <img src={icon} alt={description} />
-          </li>
-        </ul>
+            {Math.round(temperature)}°C
+          </div>
+          <div className="col-6">
+            <ul>
+              <li>Precipitation: 0%</li>
+              <li>Humidity: {humidity}%</li>
+              <li>wind: {wind}km/h</li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   } else {
