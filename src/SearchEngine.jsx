@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function SearchEngine() {
-  let [city, setCity] = useState("");
+export default function SearchEngine(props) {
+  const [city, setCity] = useState("");
+  const defaultCity = props.defaultCity;
   // let [temperature, setTemperature] = useState(null);
   // let [humidity, setHumidity] = useState("");
   // let [wind, setWind] = useState(null);
   // let [icon, setIcon] = useState("");
   // let [description, setDescription] = useState("");
-  let [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(false);
   const [weatherData, setWeatherData] = useState({});
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = "1f485c022e4af72c068b4973496c26cc";
+    const apiKey = "1f485c022e4af72c068b4973496c26cc";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(displayWeather);
   }
