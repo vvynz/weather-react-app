@@ -11,7 +11,7 @@ export default function SearchEngine(props) {
   // let [icon, setIcon] = useState("");
   // let [description, setDescription] = useState("");
   const [load, setLoad] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -27,7 +27,7 @@ export default function SearchEngine(props) {
   function displayWeather(response) {
     console.log("DATA=", response.data);
     // console.log("Date", new Date(response.data.dt*1000));
-    setLoad(true);
+    // setLoad(true);
     // setTemperature(response.data.main.temp);
     // setHumidity(response.data.main.humidity);
     // setWind(response.data.wind.speed);
@@ -37,9 +37,10 @@ export default function SearchEngine(props) {
     // );
 
     setWeatherData({
+      ready: true,
       city: response.data.name,
       temperature: response.data.main.temp,
-      date: new Date(response.data.dt*1000),
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       humidity: response.data.main.humidity,
@@ -47,8 +48,9 @@ export default function SearchEngine(props) {
       precipitation: "7"
     })
   }
+  // console.log("TEST?", weatherData.date);
 
-  if (load) {
+  if (weatherData.ready) {
     return (
       <div>
         <form onSubmit={handleSubmit}>
