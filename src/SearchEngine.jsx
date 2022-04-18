@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormatDate from "./FormateDate";
 
 export default function SearchEngine(props) {
   const [city, setCity] = useState("");
@@ -25,6 +26,7 @@ export default function SearchEngine(props) {
 
   function displayWeather(response) {
     console.log("DATA=", response.data);
+    console.log("Date", new Date(response.data.dt*1000));
     setLoad(true);
     // setTemperature(response.data.main.temp);
     // setHumidity(response.data.main.humidity);
@@ -37,6 +39,7 @@ export default function SearchEngine(props) {
     setWeatherData({
       city: response.data.name,
       temperature: response.data.main.temp,
+      date: new Date(response.data.dt*1000),
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       humidity: response.data.main.humidity,
@@ -64,6 +67,7 @@ export default function SearchEngine(props) {
           </div>
         </form>
         <h1>{weatherData.city}</h1>
+        <FormatDate />
         <p>{weatherData.description}</p>
         <div className="row">
           <div className="col-6">
