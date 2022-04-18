@@ -26,7 +26,7 @@ export default function SearchEngine(props) {
 
   function displayWeather(response) {
     console.log("DATA=", response.data);
-    console.log("Date", new Date(response.data.dt*1000));
+    // console.log("Date", new Date(response.data.dt*1000));
     setLoad(true);
     // setTemperature(response.data.main.temp);
     // setHumidity(response.data.main.humidity);
@@ -67,7 +67,7 @@ export default function SearchEngine(props) {
           </div>
         </form>
         <h1>{weatherData.city}</h1>
-        <FormatDate />
+        <FormatDate date={weatherData.date}/>
         <p>{weatherData.description}</p>
         <div className="row">
           <div className="col-6">
