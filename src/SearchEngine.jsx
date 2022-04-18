@@ -3,12 +3,13 @@ import axios from "axios";
 
 export default function SearchEngine() {
   let [city, setCity] = useState("");
-  let [temperature, setTemperature] = useState(null);
-  let [humidity, setHumidity] = useState("");
-  let [wind, setWind] = useState(null);
-  let [icon, setIcon] = useState("");
-  let [description, setDescription] = useState("");
+  // let [temperature, setTemperature] = useState(null);
+  // let [humidity, setHumidity] = useState("");
+  // let [wind, setWind] = useState(null);
+  // let [icon, setIcon] = useState("");
+  // let [description, setDescription] = useState("");
   let [load, setLoad] = useState(false);
+  const [weatherData, setWeatherData] = useState({});
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -22,14 +23,25 @@ export default function SearchEngine() {
   }
 
   function displayWeather(response) {
+    console.log("DATA=", response.data);
     setLoad(true);
-    setTemperature(response.data.main.temp);
-    setHumidity(response.data.main.humidity);
-    setWind(response.data.wind.speed);
-    setDescription(response.data.weather[0].description);
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    // setTemperature(response.data.main.temp);
+    // setHumidity(response.data.main.humidity);
+    // setWind(response.data.wind.speed);
+    // setDescription(response.data.weather[0].description);
+    // setIcon(
+    //   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    // );
+
+    setWeatherData({
+      city: response.data.name,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      precipitation: "7"
+    })
   }
 
   if (load) {
@@ -50,18 +62,18 @@ export default function SearchEngine() {
             </div>
           </div>
         </form>
-        <h1>{city}</h1>
-        <p>{description}</p>
+        <h1>{weatherData.city}</h1>
+        <p>{weatherData.description}</p>
         <div className="row">
           <div className="col-6">
-            <img src={icon} alt={description} />
-            {Math.round(temperature)}°C
+            <img src={weatherData.icon} alt={weatherData.description} />
+            {Math.round(weatherData.temperature)}°C
           </div>
           <div className="col-6">
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: {humidity}%</li>
-              <li>wind: {wind}km/h</li>
+              <li>Precipitation: {weatherData.precipitation}%</li>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>wind: {weatherData.wind}km/h</li>
             </ul>
           </div>
         </div>
