@@ -10,7 +10,7 @@ export default function SearchEngine(props) {
   // let [wind, setWind] = useState(null);
   // let [icon, setIcon] = useState("");
   // let [description, setDescription] = useState("");
-  const [load, setLoad] = useState(false);
+  // const [load, setLoad] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleSubmit(event) {
@@ -25,7 +25,7 @@ export default function SearchEngine(props) {
   }
 
   function displayWeather(response) {
-    console.log("DATA=", response.data);
+
     // console.log("Date", new Date(response.data.dt*1000));
     // setLoad(true);
     // setTemperature(response.data.main.temp);
@@ -48,7 +48,6 @@ export default function SearchEngine(props) {
       precipitation: "7"
     })
   }
-  // console.log("TEST?", weatherData.date);
 
   if (weatherData.ready) {
     return (
