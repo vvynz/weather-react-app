@@ -25,7 +25,6 @@ export default function SearchEngine(props) {
   }
 
   function displayWeather(response) {
-
     // console.log("Date", new Date(response.data.dt*1000));
     // setLoad(true);
     // setTemperature(response.data.main.temp);
@@ -45,8 +44,8 @@ export default function SearchEngine(props) {
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      precipitation: "7"
-    })
+      precipitation: "7",
+    });
   }
 
   if (weatherData.ready) {
@@ -68,7 +67,7 @@ export default function SearchEngine(props) {
           </div>
         </form>
         <h1>{weatherData.city}</h1>
-        <FormatDate date={weatherData.date}/>
+        <FormatDate date={weatherData.date} />
         <p>{weatherData.description}</p>
         <div className="row">
           <div className="col-6">
@@ -91,16 +90,16 @@ export default function SearchEngine(props) {
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
-            <input
-            type="search"
-            placeholder="Enter a city"
-            onChange={updateCity}
-            className="form-control"
-          />
+              <input
+                type="search"
+                placeholder="Enter a city"
+                onChange={updateCity}
+                className="form-control"
+              />
             </div>
             <div className="col-3">
-          <input type="submit" className="btn btn-primary"/>
-          </div>
+              <input type="submit" className="btn btn-primary" />
+            </div>
           </div>
         </form>
       </div>
