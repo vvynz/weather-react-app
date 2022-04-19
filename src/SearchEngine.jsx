@@ -4,7 +4,7 @@ import FormatDate from "./FormateDate";
 
 export default function SearchEngine(props) {
   const [city, setCity] = useState("");
-  const defaultCity = props.defaultCity;
+  // const defaultCity = props.defaultCity;
   // let [temperature, setTemperature] = useState(null);
   // let [humidity, setHumidity] = useState("");
   // let [wind, setWind] = useState(null);
