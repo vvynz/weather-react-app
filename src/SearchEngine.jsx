@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 import FormatDate from "./FormateDate";
 
 export default function SearchEngine(props) {
@@ -66,8 +67,9 @@ export default function SearchEngine(props) {
             </div>
           </div>
         </form>
+        <WeatherInfo />
         <h1>{weatherData.city}</h1>
-        <FormatDate date={weatherData.date} />
+        {/* <FormatDate date={weatherData.date} /> */}
         <p>{weatherData.description}</p>
         <div className="row">
           <div className="col-6">
