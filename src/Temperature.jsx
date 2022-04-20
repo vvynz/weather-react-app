@@ -8,6 +8,11 @@ export default function Temperature(props) {
     setUnit("fahrenheit");
   }
 
+  function convertToC(e) {
+    e.preventDefault();
+    setUnit("celsius");
+  }
+
   if (unit === "celsius") {
     return (
       <div className="Temp">
@@ -21,9 +26,9 @@ export default function Temperature(props) {
     );
   } else {
     return (
-      <div className="Temp">
+      <div className="temp">
         <span>
-          {Math.round(props.celsius)} <a href="/">°C</a> | °F
+          {Math.round(props.celsius)} <a href="/" onClick={convertToC}>°C</a> | °F
         </span>
       </div>
     );
