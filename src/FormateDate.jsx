@@ -11,6 +11,6 @@ export default function FormatDate(props) {
   if (minutes < 10) minutes = `0${minutes}`;
 
   return(
-    <p>{day} {hour}:{minutes}</p>
+    <p className="date">{day} {hour}:{minutes}</p>
   );
 }

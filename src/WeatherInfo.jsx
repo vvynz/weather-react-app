@@ -3,17 +3,18 @@ import FormatDate from "./FormateDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
 import ReactAnimatedWeather from "react-animated-weather";
+import "./Weather.scss";
 
 export default function WeatherInfo(props) {
   const data = props.data;
 
   return (
-    <div>
+    <div className="info-display">
       <h1>{data.city}</h1>
       <FormatDate date={data.date} />
       <p>{data.description}</p>
       <div className="row">
-        <div className="col-6">
+        <div className="col-6 icon-col">
           <WeatherIcon icon={data.icon} />
           <Temperature celsius={data.temperature}/>
         </div>
