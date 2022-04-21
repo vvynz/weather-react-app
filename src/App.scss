@@ -10,7 +10,7 @@ $secondary-color: #c1c1c1;
 .App-body {
   display: block;
   margin: auto;
-  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 12%), 0 0 0 1px rgb(0 0 0 / 8%);
+  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 10%), 0 0 0 1px rgb(0 0 0 / 8%);
   max-width: 600px;
   border-radius: 7px;
   padding: 10px;
@@ -39,7 +39,17 @@ footer {
   width: 100%;
 }
 
+.search-btn:hover, .search-btn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: $secondary-color;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
 .search-btn:hover {
-  background-color: rgb(207, 211, 236, 0.75);
-  border-color: $primary-color;
+  transform: translateY(-1px);
+}
+
+.search-btn:active {
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
 }
