@@ -22,8 +22,7 @@ export default function WeatherInfo(props) {
                 color="GREY"
                 size={18}
                 animate={true}
-              />
-              : {data.precipitation}%
+              /> {data.precipitation}%
             </li>
             {/* <li>Humidity: {data.humidity}%</li> */}
             <li>
@@ -32,8 +31,7 @@ export default function WeatherInfo(props) {
                 color="GREY"
                 size={18}
                 animate={true}
-              />
-              : {data.wind}km/h
+              /> {data.wind}km/h
             </li>
           </ul>
         </div>
