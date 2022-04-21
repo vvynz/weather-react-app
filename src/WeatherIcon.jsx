@@ -1,5 +1,5 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
+// import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.scss";
 import brokenCloudsDay from "./icons/broken-clouds-day.svg";
 import brokenCloudsNight from "./icons/broken-clouds-night.svg"
@@ -64,6 +64,6 @@ export default function WeatherIcon(props) {
     // size={100}
     // animate={true}
     // />
-    <img className="weather-icon" src={iconMap[props.icon]}></img>
+    <img className="weather-icon" src={iconMap[props.icon]} alt="" />
   );
 }
