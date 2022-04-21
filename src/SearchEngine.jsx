@@ -15,6 +15,10 @@ export default function SearchEngine(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    searchCity();
+  }
+
+  function searchCity() {
     const apiKey = "1f485c022e4af72c068b4973496c26cc";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(displayWeather);
@@ -25,7 +29,9 @@ export default function SearchEngine(props) {
   }
 
   function displayWeather(response) {
-    // console.log("Date", new Date(response.data.dt*1000));
+    // const time = new Date(response.data.dt*1000);
+    // console.log("Date", time.toLocaleString({hour: 'numeric', minute: 'numeric', hour12: true}));
+    // console.log("DATA", response.data.weather[0].id);
     // setLoad(true);
     // setTemperature(response.data.main.temp);
     // setHumidity(response.data.main.humidity);
@@ -71,6 +77,7 @@ export default function SearchEngine(props) {
       </div>
     );
   } else {
+    searchCity();
     return (
       <div>
         <form className="search-form" onSubmit={handleSubmit}>
