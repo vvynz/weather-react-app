@@ -3,8 +3,8 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 
 export default function SearchEngine(props) {
-  const [city, setCity] = useState("");
-  // const defaultCity = props.defaultCity;
+  const defaultCity = props.defaultCity;
+  const [city, setCity] = useState(defaultCity);
   // let [temperature, setTemperature] = useState(null);
   // let [humidity, setHumidity] = useState("");
   // let [wind, setWind] = useState(null);
@@ -63,7 +63,7 @@ export default function SearchEngine(props) {
               />
             </div>
             <div className="col-3">
-              <input type="submit" className="btn btn-primary"/>
+              <input type="submit" className="btn btn-primary search-btn"/>
             </div>
           </div>
         </form>
@@ -84,7 +84,7 @@ export default function SearchEngine(props) {
               />
             </div>
             <div className="col-3">
-              <input type="submit" className="btn btn-primary" />
+              <input type="submit" className="btn btn-primary search-btn" />
             </div>
           </div>
         </form>
