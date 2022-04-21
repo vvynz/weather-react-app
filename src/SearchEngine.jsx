@@ -69,11 +69,13 @@ export default function SearchEngine(props) {
               />
             </div>
             <div className="col-3">
-              <input type="submit" className="btn search-btn"/>
+              <button type="submit" className="btn search-btn">
+                Search
+              </button>
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData}/>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
@@ -91,7 +93,9 @@ export default function SearchEngine(props) {
               />
             </div>
             <div className="col-3">
-              <input type="submit" className="btn search-btn" />
+              <button type="submit" className="btn search-btn">
+                Search
+              </button>
             </div>
           </div>
         </form>
