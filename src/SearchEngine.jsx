@@ -52,7 +52,7 @@ export default function SearchEngine(props) {
   if (weatherData.ready) {
     return (
       <div>
-        <form onSubmit={handleSubmit}>
+        <form className="search-form" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
@@ -73,7 +73,7 @@ export default function SearchEngine(props) {
   } else {
     return (
       <div>
-        <form onSubmit={handleSubmit}>
+        <form className="search-form" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
