@@ -1,10 +1,15 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
+import "./Weather.scss";
+import clearDay from "./icons/clear-day.svg";
+import clearNight from "./icons/clear-night.svg";
 
 export default function WeatherIcon(props) {
   const iconMap = {
-    "01d": "CLEAR_DAY",
-    "01n": "CLEAR_NIGHT",
+    // "01d": "CLEAR_DAY",
+    "01d": clearDay,
+    // "01n": "CLEAR_NIGHT",
+    "01n": clearNight,
     "02d": "PARTLY_CLOUDY_DAY",
     "02n": "PARTLY_CLOUDY_NIGHT",
     "03d": "PARTLY_CLOUDY_DAY",
@@ -23,11 +28,12 @@ export default function WeatherIcon(props) {
     "50n": "FOG"
   }
   return(
-    <ReactAnimatedWeather 
-    icon={iconMap[props.icon]}
-    color="#DDBBFF"
-    size={100}
-    animate={true}
-    />
+    // <ReactAnimatedWeather 
+    // icon={iconMap[props.icon]}
+    // color="#DDBBFF"
+    // size={100}
+    // animate={true}
+    // />
+    <img className="weather-icon" src={iconMap[props.icon]}></img>
   );
 }
