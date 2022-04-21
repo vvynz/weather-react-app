@@ -14,10 +14,6 @@ export default function WeatherInfo(props) {
       <FormatDate date={data.date} />
       <p>{data.description}</p>
       <div className="row">
-        <div className="col-6 icon-col">
-          <WeatherIcon icon={data.icon} />
-          <Temperature celsius={data.temperature}/>
-        </div>
         <div className="col-6">
           <ul>
             <li>
@@ -40,6 +36,10 @@ export default function WeatherInfo(props) {
               : {data.wind}km/h
             </li>
           </ul>
+        </div>
+        <div className="col-6 icon-col">
+          <WeatherIcon icon={data.icon} />
+          <Temperature celsius={data.temperature}/>
         </div>
       </div>
     </div>
