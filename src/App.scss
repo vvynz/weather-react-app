@@ -1,3 +1,6 @@
+$primary-color: rgb(207, 211, 236, 0.45);
+$secondary-color: #c1c1c1;
+
 .App {
   font-family: sans-serif;
   text-align: left;
@@ -7,10 +10,16 @@
 .App-body {
   display: block;
   margin: auto;
-  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
+  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 12%), 0 0 0 1px rgb(0 0 0 / 8%);
   max-width: 600px;
   border-radius: 7px;
   padding: 10px;
+  // background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  // background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  // background: radial-gradient(circle at 10% 20%, rgba(216, 241, 230, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
+  // background: linear-gradient(109.6deg, rgb(245, 239, 249) 30.1%, rgb(207, 211, 236) 100.2%);
+  // background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: radial-gradient(circle at 10% 20%, rgb(242, 235, 243) 0%, rgb(234, 241, 249) 90.1%);
 }
 
 footer {
@@ -24,5 +33,13 @@ footer {
 }
 
 .search-btn {
+  background-color: rgb(207, 211, 236, 0.45);
+  border-color: $primary-color;
+  color: $secondary-color;
   width: 100%;
+}
+
+.search-btn:hover {
+  background-color: rgb(207, 211, 236, 0.75);
+  border-color: $primary-color;
 }
