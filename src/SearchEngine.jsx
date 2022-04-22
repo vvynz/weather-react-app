@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForcast from "./WeatherForcast";
 
 export default function SearchEngine(props) {
   const defaultCity = props.defaultCity;
@@ -76,6 +77,7 @@ export default function SearchEngine(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForcast />
       </div>
     );
   } else {
