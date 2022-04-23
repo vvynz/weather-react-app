@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-import WeatherForcast from "./WeatherForcast";
+import WeatherForecast from "./WeatherForecastA";
 
 export default function SearchEngine(props) {
   const defaultCity = props.defaultCity;
@@ -32,7 +32,7 @@ export default function SearchEngine(props) {
   function displayWeather(response) {
     // const time = new Date(response.data.dt*1000);
     // console.log("Date", time.toLocaleString({hour: 'numeric', minute: 'numeric', hour12: true}));
-    console.log("DATA", response.data);
+    // console.log("DATA", response.data);
     // setLoad(true);
     // setTemperature(response.data.main.temp);
     // setHumidity(response.data.main.humidity);
@@ -78,7 +78,7 @@ export default function SearchEngine(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForcast coord={weatherData.coord} />
+        <WeatherForecast coord={weatherData.coord} />
       </div>
     );
   } else {
