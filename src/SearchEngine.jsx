@@ -32,7 +32,7 @@ export default function SearchEngine(props) {
   function displayWeather(response) {
     // const time = new Date(response.data.dt*1000);
     // console.log("Date", time.toLocaleString({hour: 'numeric', minute: 'numeric', hour12: true}));
-    // console.log("DATA", response.data.weather[0].id);
+    console.log("DATA", response.data);
     // setLoad(true);
     // setTemperature(response.data.main.temp);
     // setHumidity(response.data.main.humidity);
@@ -45,6 +45,7 @@ export default function SearchEngine(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      coord: response.data.coord,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
@@ -52,7 +53,7 @@ export default function SearchEngine(props) {
       // icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      precipitation: "7",
+      precipitation: "7", //TEMP DATA, update later
     });
   }
 
@@ -77,7 +78,7 @@ export default function SearchEngine(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForcast />
+        <WeatherForcast coord={weatherData.coord} />
       </div>
     );
   } else {
