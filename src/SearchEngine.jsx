@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function SearchEngine(props) {
   const defaultCity = props.defaultCity;
@@ -58,7 +60,7 @@ export default function SearchEngine(props) {
             </div>
             <div className="col-3">
               <button type="submit" className="btn search-btn">
-                Search
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
             </div>
           </div>
