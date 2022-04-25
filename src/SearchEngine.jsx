@@ -6,12 +6,6 @@ import WeatherForecast from "./WeatherForecast";
 export default function SearchEngine(props) {
   const defaultCity = props.defaultCity;
   const [city, setCity] = useState(defaultCity);
-  // let [temperature, setTemperature] = useState(null);
-  // let [humidity, setHumidity] = useState("");
-  // let [wind, setWind] = useState(null);
-  // let [icon, setIcon] = useState("");
-  // let [description, setDescription] = useState("");
-  // const [load, setLoad] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleSubmit(event) {
@@ -33,14 +27,7 @@ export default function SearchEngine(props) {
     // const time = new Date(response.data.dt*1000);
     // console.log("Date", time.toLocaleString({hour: 'numeric', minute: 'numeric', hour12: true}));
     // console.log("DATA", response.data);
-    // setLoad(true);
-    // setTemperature(response.data.main.temp);
-    // setHumidity(response.data.main.humidity);
-    // setWind(response.data.wind.speed);
-    // setDescription(response.data.weather[0].description);
-    // setIcon(
-    //   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    // );
+
 
     setWeatherData({
       ready: true,
@@ -50,7 +37,6 @@ export default function SearchEngine(props) {
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      // icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       precipitation: "7", //TEMP DATA, update later
