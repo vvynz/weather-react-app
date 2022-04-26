@@ -12,10 +12,8 @@
 
 .temp {
   // display: flex;
-  border: 1px solid black;
-  // margin-left: 7px;
-  float: right;
-  font-size: 28px;
+  // border: 1px solid black;
+  font-size: 26px;
 }
 
 .temp a {
@@ -27,7 +25,9 @@
 }
 
 .main-icon-display {
-  width: 50%;
+  // border: 1px solid black;
+  // padding: auto;
+  width: 65%;
   height: auto;
 }
 
@@ -38,15 +38,15 @@
 
 .WeatherForecast {
   text-align: center;
+  padding-bottom: 12px;
 }
 
 .WeatherForecast-date {
-  border: 1px solid black;
-  text-align: center;
+  // border: 1px solid black;
 }
 
 .WeatherForecast-icon {
-  width: 130%;
+  width: auto;
   height: auto;
 }
 

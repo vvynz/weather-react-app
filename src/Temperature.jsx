@@ -29,10 +29,7 @@ export default function Temperature(props) {
     return (
       <div className="temp">
         <span className="fahrenheit">
-          {Math.round(fahrenheit)}
-          <a href="/" onClick={convertToC}>
-            °F
-          </a>|°C
+          {Math.round(fahrenheit)}°F | <a href="/" onClick={convertToC}>°C</a>
         </span>
       </div>
     );

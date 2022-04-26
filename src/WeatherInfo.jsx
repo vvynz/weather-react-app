@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
       <FormatDate date={data.date} />
       <p>{data.description}</p>
       <div className="row">
-        <div className="col-6">
+        <div className="col-5">
           <ul>
             <li>
               <ReactAnimatedWeather
@@ -35,7 +35,7 @@ export default function WeatherInfo(props) {
             </li>
           </ul>
         </div>
-        <div className="col-6 icon-col">
+        <div className="col-7 icon-col">
           <div className="main-icon-display">
             <WeatherIcon icon={data.icon} />
           </div>
