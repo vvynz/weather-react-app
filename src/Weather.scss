@@ -11,7 +11,9 @@
 }
 
 .temp {
-  margin-left: 10px;
+  // display: flex;
+  border: 1px solid black;
+  // margin-left: 7px;
   float: right;
   font-size: 28px;
 }
@@ -24,13 +26,27 @@
   display: flex;
 }
 
-.weather-icon {
-  width: 40%;
+.main-icon-display {
+  width: 50%;
   height: auto;
 }
 
+// .weather-icon {
+//   width: 40%;
+//   height: auto;
+// }
+
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecast-date {
+  border: 1px solid black;
+  text-align: center;
+}
+
 .WeatherForecast-icon {
-  width: 100%;
+  width: 130%;
   height: auto;
 }
 
