@@ -29,16 +29,14 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
-      <div className="row weather-details">
-        <div className="col-5">
-          <ul>
-            <li>Humidity: {data.humidity}%</li>
-            <li>
-              Wind: {data.wind}km/h
-            </li>
-            <li>High: {data.temp_max}°</li>
-            <li>Low: {data.temp_min}°</li>
-          </ul>
+      <div className="row">
+        <div className="col-6 weather-details">
+          <span>Humidity: {data.humidity}% </span>
+          <span>Wind: {data.wind}km/h</span>
+        </div>
+        <div className="col-6 weather-details">
+          <span>High: {data.temp_max}°  </span>
+          <span>Low: {data.temp_min}°</span>
         </div>
         {/* <div className="col-7 icon-col">
           <div className="main-icon-display">
