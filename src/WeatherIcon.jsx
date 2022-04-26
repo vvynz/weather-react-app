@@ -2,7 +2,7 @@ import React from "react";
 // import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.scss";
 import brokenCloudsDay from "./icons/broken-clouds-day.svg";
-import brokenCloudsNight from "./icons/broken-clouds-night.svg"
+import brokenCloudsNight from "./icons/broken-clouds-night.svg";
 import clearDay from "./icons/clear-day.svg";
 import clearNight from "./icons/clear-night.svg";
 import partlyCloudyDay from "./icons/partly-cloudy-day.svg";
@@ -55,15 +55,17 @@ export default function WeatherIcon(props) {
     "13d": snow,
     "13n": snow,
     "50d": fog,
-    "50n": fogNight
-  }
-  return(
-    // <ReactAnimatedWeather 
+    "50n": fogNight,
+  };
+  return (
+    // <ReactAnimatedWeather
     // icon={iconMap[props.icon]}
     // color="#DDBBFF"
     // size={100}
     // animate={true}
     // />
-    <img className="weather-icon" src={iconMap[props.icon]} alt="" />
+    <div>
+      <img className="weather-icon" src={iconMap[props.icon]} alt="" />
+    </div>
   );
 }
