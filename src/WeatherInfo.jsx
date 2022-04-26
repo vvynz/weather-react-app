@@ -2,7 +2,6 @@ import React from "react";
 import FormatDate from "./FormatDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
-import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.scss";
 
 export default function WeatherInfo(props) {
@@ -33,22 +32,8 @@ export default function WeatherInfo(props) {
       <div className="row weather-details">
         <div className="col-5">
           <ul>
-            {/* <li>
-              <ReactAnimatedWeather
-                icon="SLEET"
-                color="GREY"
-                size={18}
-                animate={true}
-              /> {data.precipitation}%
-            </li> */}
             <li>Humidity: {data.humidity}%</li>
             <li>
-              {/* <ReactAnimatedWeather
-                icon="WIND"
-                color="GREY"
-                size={18}
-                animate={true}
-              />  */}
               Wind: {data.wind}km/h
             </li>
             <li>High: {data.temp_max}°</li>
