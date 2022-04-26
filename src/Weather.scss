@@ -6,13 +6,24 @@
   list-style: none;
 }
 
+.city-display {
+  font-size: 30px;
+  text-align: center;
+}
+
+.country {
+  opacity: 40%;
+}
+
 .date {
   margin-bottom: 0;
 }
 
 .temp {
   // border: 1px solid black;
-  font-size: 26px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center ;
 }
 
 .temp a {
@@ -23,11 +34,37 @@
   display: flex;
 }
 
+.date-display {
+  text-align: center;
+  font-size: 18px;
+}
+
+.feels_like {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-temp-display {
+  display: flex;
+  justify-content: center;
+}
+
 .main-icon-display {
   // border: 1px solid black;
-  width: 65%;
+  width: 50%;
   height: auto;
 }
+
+.weather-desc {
+  text-align: center;
+  font-size: 18px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: center;
+}
+
 
 .WeatherForecast {
   text-align: center;

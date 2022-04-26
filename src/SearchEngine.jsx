@@ -34,14 +34,18 @@ export default function SearchEngine(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      country: response.data.sys.country,
       coord: response.data.coord,
       temperature: response.data.main.temp,
+      feels_like: response.data.main.feels_like,
+      temp_max: response.data.main.temp_max,
+      temp_min: response.data.main.temp_min,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      precipitation: "7", //TEMP DATA, update later
+      // precipitation: "7", //TEMP DATA, update later
     });
   }
 
