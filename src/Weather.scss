@@ -44,15 +44,7 @@
   flex-direction: column;
   align-items: flex-end;
   // justify-content: center;
-}
-
-.temp-display {
-  text-align: left;
-}
-
-.feels_like {
-  // display: flex;
-  // justify-content: center;
+  font-size: 14px;
 }
 
 .icon-display {
@@ -66,16 +58,14 @@
   height: auto;
 }
 
-.weather-desc {
-  text-align: center;
-  font-size: 18px;
-}
-
 .weather-details {
   display: flex;
   justify-content: space-evenly;
 }
 
+.temp_low {
+  opacity: 40%;
+}
 
 .WeatherForecast {
   text-align: center;
