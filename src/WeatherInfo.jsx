@@ -22,7 +22,7 @@ export default function WeatherInfo(props) {
           <div className="temp-display">
             <Temperature celsius={data.temperature} />
           </div>
-          <span className="feels_like">Feels like {data.feels_like}°</span>
+          <span className="feels_like">Feels like {Math.round(data.feels_like)}°</span>
           {/* <div className="weather-desc">{data.description}</div> */}
         </div>
         <div className="col-7 icon-display">
