@@ -39,9 +39,20 @@
   font-size: 18px;
 }
 
-.feels_like {
+.temp-col {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  // justify-content: center;
+}
+
+.temp-display {
+  text-align: left;
+}
+
+.feels_like {
+  // display: flex;
+  // justify-content: center;
 }
 
 .icon-display {
@@ -51,7 +62,7 @@
 
 .main-icon-display {
   // border: 1px solid black;
-  width: 45%;
+  width: 60%;
   height: auto;
 }
 

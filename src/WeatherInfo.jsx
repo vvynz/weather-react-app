@@ -17,13 +17,15 @@ export default function WeatherInfo(props) {
         <span className="city">{data.city}, </span>
         <span className="country">{data.country}</span>
       </div>
-      <div className="row temp-display">
-        <Temperature celsius={data.temperature} />
-      </div>
-      <span className="feels_like">Feels like {data.feels_like}°</span>
-      <div className="weather-desc">{data.description}</div>
       <div className="row">
-        <div className="col icon-display">
+        <div className="col-5 temp-col">
+          <div className="temp-display">
+            <Temperature celsius={data.temperature} />
+          </div>
+          <span className="feels_like">Feels like {data.feels_like}°</span>
+          {/* <div className="weather-desc">{data.description}</div> */}
+        </div>
+        <div className="col-7 icon-display">
           <div className="main-icon-display">
             <WeatherIcon icon={data.icon} />
           </div>
@@ -35,7 +37,7 @@ export default function WeatherInfo(props) {
           <span>Wind: {data.wind}km/h</span>
         </div>
         <div className="col-6 weather-details">
-          <span>High: {Math.round(data.temp_max)}°  </span>
+          <span>High: {Math.round(data.temp_max)}° </span>
           <span>Low: {Math.round(data.temp_min)}°</span>
         </div>
         {/* <div className="col-7 icon-col">
