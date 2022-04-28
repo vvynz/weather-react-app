@@ -12,7 +12,7 @@ function App() {
       <SearchEngine defaultCity="Toronto" />
       </div>
       <footer>
-        This project was coded by <a href="https://vivianzhang.netlify.app/" target="_blank" rel="noreferrer">Vivian Zhang</a> and is <a href="https://github.com/vvynz/weather-react-app" target="_blank" rel="noreferrer">open-sourced on Github</a>. 
+        This project was coded by <a href="https://vivianzhang.netlify.app/" target="_blank" rel="noreferrer">Vivian Zhang</a> and is <a href="https://github.com/vvynz/weather-react-app" target="_blank" rel="noreferrer">open-sourced on Github</a>. Weather icons are from <a href="https://github.com/basmilius/weather-icons" target="_blank" rel="noreferrer">basmilius</a>.
       </footer>
     </div>
   );
