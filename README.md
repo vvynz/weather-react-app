@@ -6,3 +6,20 @@ This weather app was bootstrapped with [Create React App](https://github.com/fac
 
 !["Weather app celsius"](https://github.com/vvynz/weather-react-app/blob/master/public/react_weather_cel.png)
 !["Weather app fahrenheit"](https://github.com/vvynz/weather-react-app/blob/master/public/react_weather_fahr.png)
+
+## Dependencies
+
+- React
+- Axios
+- SASS
+
+## Getting Started
+
+### Install Dependencies
+```sh
+npm install
+```
+### Running Development Server
+```sh
+npm start
+```
