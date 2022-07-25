@@ -1,21 +1,21 @@
 import React from "react";
 // import ReactAnimatedWeather from "react-animated-weather";
-import "./Weather.scss";
-import brokenCloudsDay from "./icons/broken-clouds-day.svg";
-import brokenCloudsNight from "./icons/broken-clouds-night.svg";
-import clearDay from "./icons/clear-day.svg";
-import clearNight from "./icons/clear-night.svg";
-import partlyCloudyDay from "./icons/partly-cloudy-day.svg";
-import partlyCloudyNight from "./icons/partly-cloudy-night.svg";
-import scatteredClouds from "./icons/scattered-clouds.svg";
-import showerRainDay from "./icons/shower-rain-day.svg";
-import showerRainNight from "./icons/shower-rain-night.svg";
-import dayRain from "./icons/day-rain.svg";
-import nightRain from "./icons/night-rain.svg";
-import thunderstorm from "./icons/thunderstorms.svg";
-import snow from "./icons/snow.svg";
-import fog from "./icons/fog.svg";
-import fogNight from "./icons/fog-night.svg";
+import "../Weather.scss";
+import brokenCloudsDay from "../icons/broken-clouds-day.svg";
+import brokenCloudsNight from "../icons/broken-clouds-night.svg";
+import clearDay from "../icons/clear-day.svg";
+import clearNight from "../icons/clear-night.svg";
+import partlyCloudyDay from "../icons/partly-cloudy-day.svg";
+import partlyCloudyNight from "../icons/partly-cloudy-night.svg";
+import scatteredClouds from "../icons/scattered-clouds.svg";
+import showerRainDay from "../icons/shower-rain-day.svg";
+import showerRainNight from "../icons/shower-rain-night.svg";
+import dayRain from "../icons/day-rain.svg";
+import nightRain from "../icons/night-rain.svg";
+import thunderstorm from "../icons/thunderstorms.svg";
+import snow from "../icons/snow.svg";
+import fog from "../icons/fog.svg";
+import fogNight from "../icons//fog-night.svg";
 
 export default function WeatherIcon(props) {
   const iconMap = {
