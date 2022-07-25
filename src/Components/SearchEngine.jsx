@@ -26,11 +26,6 @@ export default function SearchEngine(props) {
   }
 
   function displayWeather(response) {
-    // const time = new Date(response.data.dt*1000);
-    // console.log("Date", time.toLocaleString({hour: 'numeric', minute: 'numeric', hour12: true}));
-    // console.log("DATA", response.data);
-
-
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -45,7 +40,6 @@ export default function SearchEngine(props) {
       icon: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      // precipitation: "7", //TEMP DATA, update later
     });
   }
 

@@ -6,7 +6,6 @@ import "../Weather.scss";
 
 export default function WeatherInfo(props) {
   const data = props.data;
-  // console.log("temp data", data);
 
   return (
     <div className="info-display">
@@ -40,12 +39,6 @@ export default function WeatherInfo(props) {
           <span className="temp_high">High: {Math.round(data.temp_max)}° </span>
           <span className="temp_low">Low: {Math.round(data.temp_min)}°</span>
         </div>
-        {/* <div className="col-7 icon-col">
-          <div className="main-icon-display">
-            <WeatherIcon icon={data.icon} />
-          </div>
-          <Temperature celsius={data.temperature}/>
-        </div> */}
       </div>
     </div>
   );
