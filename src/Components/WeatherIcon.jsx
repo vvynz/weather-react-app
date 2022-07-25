@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../Weather.scss";
+import "../Styles/Weather.scss";
 import brokenCloudsDay from "../icons/broken-clouds-day.svg";
 import brokenCloudsNight from "../icons/broken-clouds-night.svg";
 import clearDay from "../icons/clear-day.svg";

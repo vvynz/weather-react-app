@@ -1,6 +1,6 @@
 import React from "react";
 import SearchEngine from "./Components/SearchEngine";
-import "./App.scss";
+import "./Styles/App.scss";
 
 function App() {
   return (
