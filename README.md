@@ -4,8 +4,8 @@ This weather app was bootstrapped with [Create React App](https://github.com/fac
 
 ## Previews
 
-!["Weather app celsius"](https://github.com/vvynz/weather-react-app/blob/master/public/react_weather_cel.png)
-!["Weather app fahrenheit"](https://github.com/vvynz/weather-react-app/blob/master/public/react_weather_fahr.png)
+!["Weather app celsius"](https://github.com/vvynz/weather-react-app/blob/master/docs/react_weather_cel.png)
+!["Weather app fahrenheit"](https://github.com/vvynz/weather-react-app/blob/master/docs/react_weather_fahr.png)
 
 ## Dependencies
 
