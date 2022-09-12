@@ -17,7 +17,11 @@ $secondary-color: #c1c1c1;
   // background: radial-gradient(circle at 10% 20%, rgba(216, 241, 230, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
   // background: linear-gradient(109.6deg, rgb(245, 239, 249) 30.1%, rgb(207, 211, 236) 100.2%);
   // background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  background: radial-gradient(circle at 10% 20%, rgb(242, 235, 243) 0%, rgb(234, 241, 249) 90.1%);
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(242, 235, 243) 0%,
+    rgb(234, 241, 249) 90.1%
+  );
 }
 
 footer {
@@ -27,7 +31,7 @@ footer {
 }
 
 .search-form {
-  margin: 7px;
+  margin: 5px;
 }
 
 .search-btn {
@@ -37,7 +41,8 @@ footer {
   width: 100%;
 }
 
-.search-btn:hover, .search-btn:focus {
+.search-btn:hover,
+.search-btn:focus {
   border-color: rgba(0, 0, 0, 0.15);
   color: $secondary-color;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
@@ -50,4 +55,11 @@ footer {
 .search-btn:active {
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
+}
+
+// extra small devices (550px and below)
+@media (max-width: 550px) {
+  .App-body {
+    max-width: 400px;
+  }
 }
