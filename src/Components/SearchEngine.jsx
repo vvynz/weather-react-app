@@ -53,7 +53,7 @@ export default function SearchEngine(props) {
     const units = "metric";
     let lat = pos.coords.latitude;
     let long = pos.coords.longitude;
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&long=${long}&appid=${apiKey}&units=${units}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(displayWeather);
   };
 
