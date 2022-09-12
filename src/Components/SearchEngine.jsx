@@ -45,18 +45,27 @@ export default function SearchEngine(props) {
 
   const getCurrentLocation = (e) => {
     e.preventDefault();
-    navigator.geolocation.getCurrentPosition(pos => {
+    navigator.geolocation.getCurrentPosition((pos) => {
       let crd = pos.coords;
-      console.log(`current position is ${crd}`)
+      console.log(`lat: ${crd.latitude} long: ${crd.longitude}`);
     });
-  }
+  };
+
+  const showCurrentLocation = (pos) => {
+    const apiKey = "1f485c022e4af72c068b4973496c26cc";
+    const units = "metric";
+    let lat = pos.coords.latitude;
+    let long = pos.coords.longitude;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&long=${long}&appid=${apiKey}&units=${units}`;
+    axios.get(url).then(displayWeather);
+  };
 
   if (weatherData.ready) {
     return (
       <div>
         <form className="search-form" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-6">
               <input
                 type="search"
                 placeholder="Enter a city"
@@ -66,7 +75,16 @@ export default function SearchEngine(props) {
             </div>
             <div className="col-3">
               <button type="submit" className="btn search-btn">
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+            </div>
+            <div className="col-3">
+              <button
+                className="btn search-btn"
+                type="submit"
+                onClick={getCurrentLocation}
+              >
+                Current Location
               </button>
             </div>
           </div>
