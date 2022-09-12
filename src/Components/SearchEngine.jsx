@@ -45,10 +45,7 @@ export default function SearchEngine(props) {
 
   const getCurrentLocation = (e) => {
     e.preventDefault();
-    navigator.geolocation.getCurrentPosition((pos) => {
-      let crd = pos.coords;
-      console.log(`lat: ${crd.latitude} long: ${crd.longitude}`);
-    });
+    navigator.geolocation.getCurrentPosition(showCurrentLocation);
   };
 
   const showCurrentLocation = (pos) => {
