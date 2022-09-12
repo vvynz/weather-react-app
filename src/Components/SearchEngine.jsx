@@ -4,6 +4,7 @@ import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 
 export default function SearchEngine(props) {
   const defaultCity = props.defaultCity;
@@ -62,7 +63,7 @@ export default function SearchEngine(props) {
       <div>
         <form className="search-form" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-6">
+            <div className="col-8">
               <input
                 type="search"
                 placeholder="Enter a city"
@@ -70,18 +71,18 @@ export default function SearchEngine(props) {
                 className="form-control"
               />
             </div>
-            <div className="col-3">
-              <button type="submit" className="btn search-btn">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-              </button>
-            </div>
-            <div className="col-3">
+            <div className="col-2">
               <button
                 className="btn search-btn"
                 type="submit"
                 onClick={getCurrentLocation}
               >
-                Current Location
+                <FontAwesomeIcon icon={faLocationPin} />
+              </button>
+            </div>
+            <div className="col-2">
+              <button type="submit" className="btn search-btn">
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
             </div>
           </div>
