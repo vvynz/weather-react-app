@@ -43,6 +43,14 @@ export default function SearchEngine(props) {
     });
   }
 
+  const getCurrentLocation = (e) => {
+    e.preventDefault();
+    navigator.geolocation.getCurrentPosition(pos => {
+      let crd = pos.coords;
+      console.log(`current position is ${crd}`)
+    });
+  }
+
   if (weatherData.ready) {
     return (
       <div>
