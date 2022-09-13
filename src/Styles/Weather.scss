@@ -44,6 +44,10 @@
   flex-direction: column;
   align-items: flex-end;
   // justify-content: center;
+  // font-size: 1em;
+}
+
+.feels_like, .weather-desc {
   font-size: 1em;
 }
 
@@ -80,4 +84,22 @@
 .WeatherForecast-temp-min {
   opacity: 40%;
   margin-left: 5px;
+}
+
+@media (max-width: 550px) {
+  .city-display {
+    font-size: 1.5em;
+  }
+
+  .date-display {
+    font-size: 1em;
+  }
+
+  .temp {
+    font-size: 1.5em;
+  }
+
+  .feels_like, .weather-desc {
+    font-size: 0.75em;
+  }
 }
