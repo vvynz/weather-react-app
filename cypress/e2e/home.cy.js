@@ -14,9 +14,11 @@ describe('main page', () => {
     })
 
     it.only("displays the current weather info", () => {
-      cy.get(".temp-display").contains("-5°C")
+      // cy.get(".temp-display").contains("-5°C") // this changes every time the page refreshes
       cy.get(".temp-display").find("a").click()
-      cy.get(".temp-display").find("a").contains("°C") // this one changes everytime...
+      // cy.get(".temp-display").find("a").contains("°C") // this one changes everytime...
+      cy.get(".feels_like").contains("Feels like")
+      cy.get(".weather-desc").contains("clear sky") // this will also change
     })
   })
 })
