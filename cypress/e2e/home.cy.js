@@ -13,12 +13,18 @@ describe('main page', () => {
       cy.get(".city-display").contains("Toronto, CA")
     })
 
-    it.only("displays the current weather info", () => {
+    it("displays the current weather info", () => {
       // cy.get(".temp-display").contains("-5°C") // this changes every time the page refreshes
       cy.get(".temp-display").find("a").click()
       // cy.get(".temp-display").find("a").contains("°C") // this one changes everytime...
       cy.get(".feels_like").contains("Feels like")
       cy.get(".weather-desc").contains("clear sky") // this will also change
+    })
+  })
+
+  context("upcoming forecast", () => {
+    it.only("should display a 5-day forecast", () => {
+      cy.get(".WeatherForecast").should("exist")
     })
   })
 })
