@@ -10,7 +10,7 @@ export default function WeatherInfo(props) {
 
   return (
     <div className="info-display">
-      {error.length > 0 ? <p>{error}</p> : null}
+      {error.length > 0 ? <p className="err-message">{error}</p> : null}
       <div className="date-display">
         <FormatDate date={data.date} />
       </div>
