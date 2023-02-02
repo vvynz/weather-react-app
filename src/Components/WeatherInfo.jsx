@@ -10,23 +10,23 @@ export default function WeatherInfo(props) {
 
   return (
     <div className="info-display">
-      {error.length > 0 ? <p className="err-message">{error}</p> : null}
-      <div className="date-display">
+      {error.length > 0 ? <p data-test="error-display" className="err-message">{error}</p> : null}
+      <div data-test="date-header" className="date-display">
         <FormatDate date={data.date} />
       </div>
-      <div className="city-display">
+      <div data-test="city-header" className="city-display">
         <span className="city">{data.city}, </span>
         <span className="country">{data.country}</span>
       </div>
       <div className="row">
         <div className="col-5 temp-col">
-          <div className="temp-display">
+          <div data-test="temp-header" className="temp-display">
             <Temperature celsius={data.temperature} />
           </div>
-          <span className="feels_like">
+          <span data-test="feels-like"  className="feels_like">
             Feels like {Math.round(data.feels_like)}°
           </span>
-          <span className="weather-desc">{data.description}</span>
+          <span data-test="weather-description" className="weather-desc">{data.description}</span>
         </div>
         <div className="col-7 icon-display">
           <div className="main-icon-display">
