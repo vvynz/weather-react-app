@@ -8,6 +8,12 @@ describe('search form', () => {
     // tests not always passing - due to api request error
     cy.get(".form-control").type("seoul")
     cy.get('.search-form > .row > :nth-child(3)').click()
-    cy.get(".city-display").contains("Seoul, KR")
+    cy.getByData("city-header").contains("Seoul, KR")
+  })
+
+  it("will display an error message if city isn't found", () => {
+    cy.get(".form-control").type("eh")
+    cy.get(".search-form > .row > :nth-child(3").click()
+    cy.getByData("error-display").should("exist")
   })
 })
