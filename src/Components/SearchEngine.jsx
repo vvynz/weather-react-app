@@ -10,6 +10,7 @@ export default function SearchEngine(props) {
   const defaultCity = props.defaultCity;
   const [city, setCity] = useState(defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [error, setError] = useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -19,7 +20,7 @@ export default function SearchEngine(props) {
   function searchCity() {
     const apiKey = "1f485c022e4af72c068b4973496c26cc";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(displayWeather);
+    axios.get(url).then(displayWeather).catch((err) => setError("Error: Please check the spelling of the city and try again."));
   }
 
   function updateCity(event) {
@@ -27,6 +28,7 @@ export default function SearchEngine(props) {
   }
 
   function displayWeather(response) {
+    console.log("res", response)
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -87,7 +89,7 @@ export default function SearchEngine(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData} />
+        <WeatherInfo error={error} data={weatherData} />
         <WeatherForecast coord={weatherData.coord} />
       </div>
     );
