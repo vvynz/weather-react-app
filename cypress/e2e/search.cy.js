@@ -5,8 +5,9 @@ describe('search form', () => {
 
   it("allows users to search the weather of a city", () => {
     // happy path
+    // tests not always passing - due to api request error
     cy.get(".form-control").type("seoul")
-    cy.get(".search-btn").eq(1).click()
+    cy.get('.search-form > .row > :nth-child(3)').click()
     cy.get(".city-display").contains("Seoul, KR")
   })
 })
