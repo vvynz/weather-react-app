@@ -33,7 +33,6 @@ export default function SearchEngine(props) {
   }
 
   function displayWeather(response) {
-    // console.log("res", response)
     setWeatherData({
       ready: true,
       city: response.data.name,
