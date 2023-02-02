@@ -5,10 +5,12 @@ import Temperature from "./Temperature";
 import "../Styles/Weather.scss";
 
 export default function WeatherInfo(props) {
+  const error = props.error;
   const data = props.data;
 
   return (
     <div className="info-display">
+      {error.length > 0 ? <p>{error}</p> : null}
       <div className="date-display">
         <FormatDate date={data.date} />
       </div>
@@ -21,7 +23,9 @@ export default function WeatherInfo(props) {
           <div className="temp-display">
             <Temperature celsius={data.temperature} />
           </div>
-          <span className="feels_like">Feels like {Math.round(data.feels_like)}°</span>
+          <span className="feels_like">
+            Feels like {Math.round(data.feels_like)}°
+          </span>
           <span className="weather-desc">{data.description}</span>
         </div>
         <div className="col-7 icon-display">
