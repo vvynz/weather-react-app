@@ -7,8 +7,8 @@ describe("search form", () => {
     it("allows users to search the weather of a city", () => {
       // happy path
       // tests not always passing - due to api request error
-      cy.get(".form-control").type("seoul");
-      cy.get(".search-form > .row > :nth-child(3)").click();
+      cy.getByData("search-input").type("seoul");
+      cy.getByData("search-btn").click();
       cy.getByData("city-header").contains("Seoul, KR");
     });
 
@@ -20,7 +20,7 @@ describe("search form", () => {
 
     it("will remove the error message once a city is found", () => {
       cy.get(".form-control").type("sapporo");
-      cy.get(".search-form > .row > :nth-child(3)").click();
+      cy.getByData("search-btn").click();
       cy.getByData("error-display").should("not.exist");
     });
   });

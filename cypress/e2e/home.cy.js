@@ -24,7 +24,7 @@ describe('main page', () => {
 
   context("upcoming forecast", () => {
     it("should display a 5-day forecast", () => {
-      cy.get(".WeatherForecast").should("exist")
+      cy.getByData("weather-forecast").should("exist")
     })
   })
 })
