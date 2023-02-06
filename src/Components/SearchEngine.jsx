@@ -89,7 +89,11 @@ export default function SearchEngine(props) {
               </button>
             </div>
             <div className="col-2">
-              <button data-test="search-btn" type="submit" className="btn search-btn">
+              <button
+                data-test="search-btn"
+                type="submit"
+                className="btn search-btn"
+              >
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
             </div>
@@ -107,6 +111,7 @@ export default function SearchEngine(props) {
           <div className="row">
             <div className="col-9">
               <input
+                data-test="search-input"
                 type="search"
                 placeholder="Enter a city"
                 onChange={updateCity}
