@@ -12,8 +12,14 @@ describe('search form', () => {
   })
 
   it("will display an error message if city isn't found", () => {
-    cy.get(".form-control").type("eh")
+    cy.get(".form-control").type("sappporro")
     cy.get(".search-form > .row > :nth-child(3").click()
     cy.getByData("error-display").should("exist")
+  })
+
+  it("will remove the error message once a city is found", () => {
+    cy.get(".form-control").type("sapporo")
+    cy.get(".search-form > .row > :nth-child(3)").click()
+    cy.getByData("error-display").should("not.exist")
   })
 })
