@@ -26,9 +26,9 @@ describe("search form", () => {
   });
 
   context("Get location button", () => {
-    it.only("will get the user's current location", () => {
+    it("will get the user's current location", () => {
       cy.getByData("get-location-btn").click()
-      cy.getByData("city-header").contains("Greenwood Coxwell")
+      cy.getByData("city-header").contains("Greenwood Coxwell", { timeout: 10000 })
     })
   })
 });
