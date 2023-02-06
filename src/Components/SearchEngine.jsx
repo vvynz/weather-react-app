@@ -80,6 +80,7 @@ export default function SearchEngine(props) {
             </div>
             <div className="col-2">
               <button
+                data-test="get-location-btn"
                 className="btn search-btn"
                 type="submit"
                 onClick={getCurrentLocation}
@@ -88,7 +89,7 @@ export default function SearchEngine(props) {
               </button>
             </div>
             <div className="col-2">
-              <button type="submit" className="btn search-btn">
+              <button data-test="search-btn" type="submit" className="btn search-btn">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
             </div>
